@@ -1,0 +1,54 @@
+CMD
+ |_ Criar venv:
+   |_ cd "endereço da pasta"
+   |_ python -m venv venv
+
+ |_ Iniciar a venv:
+   |_ cd venv/Scripts
+   |_ activate
+
+ |_ Intalar o Django Framework
+   |_ pip install django
+
+Visual Studio
+ |_ Iniciar a venv:
+   |_ cd venv/Scripts
+   |_ activate
+
+ |_ Instalar Django Rest Framework
+   |_ pip install djangorestframework
+   |_ pip install markdown
+   |_ pip install django-filter
+
+ |_ Criar projeto Django
+   |_ django-admin startproject "nome do projeto"
+    
+ |_ Criar aplicação
+   |_ cd "nome do projeto"
+   |_ python manage.py startapp "nome da aplicação"
+   |_ Colocar o nome da aplicação no arquivo 'settings.py' em 'INSTALLED_APPS'
+
+ |_ Criar banco de dados
+   |_ cd "nome do projeto"
+   |_ python manage.py migrate
+
+ |_ Criar super usuário
+   |_ python manage.py createsuperuser
+
+ |_ Iniciar servidor
+   |_ python manage.py runserver
+
+ |_ Adicionar o Django Rest Framework no projeto
+   |_ Colocar 'rest_framework' no arquivo 'settings.py' em 'INSTALLED_APPS'
+
+ |_ Adicionar endereço do Django Rest Framework no projeto
+   |_ Colocar "path('api-auth/', include('rest_framework.urls'))" no arquivo 'urls.py' em 'urlpatterns'
+   |_ Importar o 'include' no arquivo 'urls.py'
+
+ |_ Migrar modelos para o banco de dados
+   |_ Executar o comando "python manage.py makemigrations"
+   |_ Executar o comando "python manage.py migrate"
+
+ |_ Registar modelo no arquivo 'admin.py'
+   |_ Adicionar a linha 'from .models import "nome do modelo"'
+   |_ Adicionar a linnha 'admin.site.register("nome do modelo")'
